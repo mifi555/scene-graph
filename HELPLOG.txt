@@ -1,0 +1,24 @@
+
+	HW02 HELP LOG
+
+09/16: Referenced Scene Graph lecture slides
+https://docs.google.com/presentation/d/1eDmTrbpeEtmFBfj61WdJqoh98yTOhsTrcqerarNS6wU/edit
+
+09/16: Referenced GLM documentation for assignment:
+http://glm.g-truc.net/0.9.8/api/index.html
+
+09/16: Asked on Ed how to structure derived classes and declaration in our header and .cpp files. Rexeived help from Insha.
+
+09/18 3:30PM: Went to office hours Monday: got help from Instructor Adam Mally and another TA
+
+09/19: Asked questions on Ed  with regards to adding nodes. Received help from Nicholas
+
+09/19: Used QT Guide to change user interface of Scene Graph:
+https://www.cis.upenn.edu/~cis4600/23fa/qt.html
+
+09/19 Looked up QT Style Sheets to style widgets:
+https://doc.qt.io/qt-6/stylesheet-reference.html
+
+09/20 10:00AM: Asked a question on Ed 09/20 with regards to the Node hierarchies.
+
+09/20 3:30PM: Went to Wednesday OH. I had issues with setting pivot points for the upper arms and the lower arms.

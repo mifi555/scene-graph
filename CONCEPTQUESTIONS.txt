@@ -1,0 +1,26 @@
+(3 pts) In C++, what is a virtual function and how does it relate to object polymorphism? Say I have a class Base and a class Derived that inherits from Base. Both classes implement a non-virtual function called func(). If func() is invoked by dereferencing a Base* that actually points to an instance of Derived, which implementation of func() will be called, and why?
+
+*************************
+
+A: In C++ a virtual function is a function of the base class, declared by the keyword virtual, that can be redefined by a derivative class. This means that any derived class from the base class can have its own implementation of the function.
+
+If a func() is invoked by dereferencing a Base* that actually points to an instance of Derived, the output of the function call will be Base's func(). This is due to the fact that func() is not declared as virtual in the Base class and, as a result, the function in the Base class will be called, even if the pointer points to an instance of object type Derived.
+
+*************************
+
+(2 pts) In polygon.cpp there is a constructor for the Polygon class that takes in a number of sides to construct a regular, convex polygon. There is a section of this constructor's body that sets up "indices" to construct triangles out of the polygon's perimeter vertices. Please draw how these triangles would be formed for a regular convex pentagon (five-sided polygon), and label each vertex with its index number. You may draw your image on a piece of paper and take a photograph, or create it in some sort of image editing software. Your drawing need not be perfect, just make sure it's understandable. In the end, please submit your drawing as a .png image.
+
+*************************
+
+A: [see image in file upload attachment]
+
+*************************
+
+(5 pts) If I want to write a function that builds my entire scene graph and returns its root node, what should the return type of the function be? Additionally, where in memory should I instantiate the nodes of my scene graph? Why should I instantiate my nodes in this portion of memory?
+
+*************************
+
+A: If we wanted to write a function that builds an entire scene graph and returns its root node, the return type of the function would be a unique pointer (unique_ptr<Node>). The object that stores a unique pointer owns the memory pointed to by the unique pointer. As a result, when applying unique pointers to our scene graph, a parent node owns the memory of its child nodes as each node can contain a collection of std::unique_ptr to its children. As a result, if the parent node is deleted, the children are deleted as well. Unique pointers have another advantage that they automatically deallocate memory, making memory management easier.
+
+We would allocate memory space for the Nodes on the Heap instead of the Stack because our Nodes and our scene graph can exist during the entire execution of the program. If our nodes were on the Stack, then our Nodes would be treated as local variables that would be popped off the stack once a function is executed. 
+

@@ -35,13 +35,30 @@ MainWindow::MainWindow(QWidget *parent) :
             ui->mygl, SLOT(slot_setTX(double)));
     // TODO: Mirroring the above syntax, connect spin box signals
     // to slots in MyGL that update the other transformation attributes
+    connect(ui->tySpinBox, SIGNAL(valueChanged(double)),
+            ui->mygl, SLOT(slot_setTY(double)));
+
+    connect(ui->rSpinBox, SIGNAL(valueChanged(double)),
+            ui->mygl, SLOT(slot_setRotate(double)));
+
+    connect(ui->sxSpinBox, SIGNAL(valueChanged(double)),
+            ui->mygl, SLOT(slot_setScaleX(double)));
+
+    connect(ui->sySpinBox, SIGNAL(valueChanged(double)),
+            ui->mygl, SLOT(slot_setScaleY(double)));
 
     // Connects the "Add Translate Node" button's "clicked" signal
     // to a slot in MyGL that will add a child to the currently selected
     // Node.
     connect(ui->tNodeAddButton, SIGNAL(clicked()),
             ui->mygl, SLOT(slot_addTranslateNode()));
-}
+
+
+    ui->treeWidget->setStyleSheet("background-color: lightblue; color: white;");
+//    ui->centralWidget->setStyleSheet("background-color: #333333; border: 1px solid black;");
+
+    }
+
 
 MainWindow::~MainWindow()
 {

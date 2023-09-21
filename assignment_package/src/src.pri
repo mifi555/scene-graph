@@ -5,6 +5,7 @@ SOURCES += \
     $$PWD/main.cpp \
     $$PWD/mainwindow.cpp \
     $$PWD/mygl.cpp \
+    $$PWD/scene/node.cpp \
     $$PWD/shaderprogram.cpp \
     $$PWD/la.cpp \
     $$PWD/drawable.cpp \
